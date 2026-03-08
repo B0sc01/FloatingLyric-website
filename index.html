@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloatingLyric - 极简优雅的 Mac 悬浮歌词</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 强制使用苹果原生系统字体 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .squircle { border-radius: 22.5%; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 selection:bg-pink-200 antialiased">
+
+    <nav class="w-full glass-card fixed top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight flex items-center gap-2">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">FloatingLyric</span>
+            </div>
+            <a href="#download" class="text-sm font-semibold text-gray-600 hover:text-black transition">获取软件</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 text-center max-w-4xl mx-auto mt-10">
+        <img src="icon.png" alt="FloatingLyric Icon" class="w-32 h-32 mx-auto squircle shadow-2xl mb-8 transform hover:scale-105 transition duration-300">
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6">让音乐，<br class="md:hidden">跃然于桌面。</h1>
+        <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+            专为 macOS 打造的极简桌面悬浮歌词工具。<br>丝滑的果冻动效，无缝融入系统深浅色模式，让每一句歌词都有温度。
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#download" class="bg-black text-white rounded-full px-8 py-4 font-semibold text-lg hover:bg-gray-800 transition shadow-lg transform hover:-translate-y-1">
+                免费下载 V1.0
+            </a>
+            <a href="#guide" class="bg-white text-black border border-gray-200 rounded-full px-8 py-4 font-semibold text-lg hover:bg-gray-50 transition shadow-sm">
+                查看安装教程
+            </a>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="text-3xl mb-4">✨</div>
+                <h3 class="text-xl font-bold mb-3">极致丝滑动效</h3>
+                <p class="text-gray-500 leading-relaxed">告别生硬切换。深度定制的弹簧物理动画，让新旧歌词像瀑布一样顺滑交替，极具果冻质感。</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="text-3xl mb-4">🌓</div>
+                <h3 class="text-xl font-bold mb-3">系统级深色模式</h3>
+                <p class="text-gray-500 leading-relaxed">完全遵守苹果最新设计规范，无论白天还是黑夜，程序坞图标与歌词投影都能与系统主题完美共鸣。</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="text-3xl mb-4">🎧</div>
+                <h3 class="text-xl font-bold mb-3">双擎智能侦测</h3>
+                <p class="text-gray-500 leading-relaxed">全面兼容 Apple Music 与 Spotify，无需繁琐设置，只要音乐响起，歌词便如约而至。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="bg-gray-100 py-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-10 shadow-lg text-center">
+                <h2 class="text-3xl font-bold mb-4">准备好让桌面焕然一新了吗？</h2>
+                <p class="text-gray-500 mb-8">支持 macOS 13.0 及以上版本 (Apple Silicon & Intel)</p>
+                <a href="FloatingLyric_v1.0.dmg" class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full px-10 py-4 font-bold text-lg hover:opacity-90 transition shadow-xl hover:shadow-pink-500/30 transform hover:-translate-y-1 mb-10">
+                    立即下载 FloatingLyric.dmg
+                </a>
+
+                <div id="guide" class="text-left bg-gray-50 rounded-2xl p-6 border border-gray-200">
+                    <h3 class="text-lg font-bold text-red-500 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        首次安装必读 (解决“文件已损坏”提示)
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                        由于本软件为独立开发者提供的免费作品，暂未向苹果缴纳开发者认证费，macOS 的 Gatekeeper 机制可能会误报“文件已损坏”。请按照以下步骤解除隔离即可永久正常使用：
+                    </p>
+                    <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2 mb-4">
+                        <li>打开下载好的 DMG 文件，将 <strong>FloatingLyric</strong> 拖入旁边的 Applications 文件夹。</li>
+                        <li>按下 <kbd class="bg-gray-200 px-1 rounded text-xs">Cmd</kbd> + <kbd class="bg-gray-200 px-1 rounded text-xs">空格</kbd>，搜索并打开 <strong>“终端” (Terminal)</strong>。</li>
+                        <li>复制下方命令粘贴到终端中，然后按下回车键（无任何提示即代表成功）：</li>
+                    </ol>
+                    <div class="bg-gray-900 rounded-lg p-4 flex justify-between items-center group">
+                        <code class="text-green-400 text-sm font-mono break-all">xattr -cr /Applications/FloatingLyric.app</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-400 text-sm">
+        <p>Designed & Coded with ❤️ by You.</p>
+        <p class="mt-2">© 2026 FloatingLyric. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
